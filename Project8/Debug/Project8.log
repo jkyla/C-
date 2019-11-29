@@ -1,0 +1,15 @@
+﻿  Project8.cpp
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(46,1): error C2511:  'void Names::sortList(std::string [],int)': overloaded member function not found in 'Names'
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(13): message :  see declaration of 'Names'
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(51,30): error C2440:  '=': cannot convert from 'std::string' to 'int'
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(51,29): message :  No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(54,31): error C2678:  binary '<': no operator found which takes a left-hand operand of type 'std::string' (or there is no acceptable conversion)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\system_error(263,24): message :  could be 'bool std::operator <(const std::error_condition &,const std::error_condition &) noexcept'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\system_error(258,24): message :  or       'bool std::operator <(const std::error_code &,const std::error_code &) noexcept'
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(54,31): message :  while trying to match the argument list '(std::string, int)'
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(56,28): error C2440:  '=': cannot convert from 'std::string' to 'int'
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(56,27): message :  No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(67,1): error C2511:  'void Names::displayNames(std::string [],int)': overloaded member function not found in 'Names'
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(13): message :  see declaration of 'Names'
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(77,11): error C2660:  'Names::sortList': function does not take 0 arguments
+C:\Users\johns\Desktop\COP2000Projects\Project8\Project8.cpp(21,7): message :  see declaration of 'Names::sortList'
