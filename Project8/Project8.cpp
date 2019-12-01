@@ -7,6 +7,7 @@
 #include<fstream>
 #include<string>
 #include<iomanip>
+#include<vector>
 
 using namespace std;
 
@@ -18,8 +19,8 @@ private:
 	ifstream nameFile; 
 
 	void readNames();
-	void sortList(string []);
-	void displayNames();
+	void sortList(vector<string>& );
+	void displayNames(vector<string>& );
 
 public:
 	void driver(); 
@@ -42,32 +43,39 @@ void Names::readNames()
 	}
 }
 
-void Names::sortList(string array[], int list)
+void Names::sortList(vector<string>& names)
 {
-	int startScan, minIndex, minValue;
-	for (startScan = 0; startScan < (list - 1); startScan++)
-	{
-		minIndex = startScan;
-		minValue = array[startScan];
-		for (int index = startScan + 1; index < list; index++)
-		{
-			if (array[index] < minValue)
-			{
-				minValue = array[index];
-				minIndex = index;
+	//vector<string> names(LIST);
+
+
+
+	vector<string> sort_strings(vector<string>& names); {
+		int smallest = 0;
+
+		for (int i = 0; i < names.size(); i++) {
+			for (int j = i; j < names.size(); j++) {
+				if (names[j].compare(names[smallest]) < 0) {
+					smallest = j;
+				}
+			}
+			if (smallest != i) {
+				swap(names[i], names[smallest]);
 			}
 		}
-		array[minIndex] = array[startScan];
-		array[startScan] = minValue;
+		return names; 
 	}
-
 }
 
-void Names::displayNames(string array[], int list)
+void Names::displayNames(vector<string>& names)
 {
-	for (int count = 0; count < list; count++)
-		cout << array[count] << " ";
-	cout << endl;
+	vector<string> s = {names};
+
+	vector<string> sorted_strings = names;
+
+	cout << "\nList of names in alphabetical order:" << endl;
+	for (int i = 0; i < s.size(); i++) {
+		cout << sorted_strings[i] << endl;
+	}
 }
 
 void Names::driver()
